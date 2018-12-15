@@ -8,7 +8,7 @@ SRC =  main.c \
         valid_help.c \
         lst_func.c \
         mtx_help.c \
-        recursion.c 
+        solve.c 
 
 
 SRO = $(SRC:.c=.o)
