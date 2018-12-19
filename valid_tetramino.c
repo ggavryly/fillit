@@ -92,15 +92,19 @@ static int		third_stage(char *str)
 	return (err);
 }
 
-int				valid_file(char *text)
+int                valid_file(char *text)
 {
-	int		e;
-
-	e = 0;
-	e += first_stage(text);
-	e += second_stage(text);
-	e += third_stage(text);
-	if (e)
-		return (1);
-	return (0);
+    int        e;
+    
+    if (text)
+    {
+        e = 0;
+        e += first_stage(text);
+        e += second_stage(text);
+        e += third_stage(text);
+        if (e)
+            return (1);
+        return (0);
+    }
+    return (1);
 }
